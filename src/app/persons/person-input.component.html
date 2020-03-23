@@ -1,0 +1,14 @@
+<label for="name">Name</label>
+<input type="text" id="name" #personNameEl [(ngModel)]="enteredPersonName">
+<!--If you do #..., you basically make the whole HTML element
+as an object so you can access the element in other elements like below-->
+<button (click)="onCreatePerson(personNameEl.value)">Create</button>
+<!-- () means Event parenthesis-->
+
+<!--<input type="text" id="name" #personNameEl [value]="1+1">-->
+<!--For example if you do like the above, there will be 2 inside the input in web browser-->
+<!--Remember there's a lot of properties that is available for typical HTML components such as <input>, <button>, <img> and others-->
+
+<!--[()] is special binding, typically for directive ngModel-->
+<!--ngModel is a prop that will trigger the method inside when any type of event happened. you can use this to listen to any sorts of events-->
+<!--ngModel basically will hear both sides, if user change the input value in html, any value written inside ngModel will change and vice versa-->

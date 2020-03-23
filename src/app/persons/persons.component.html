@@ -1,0 +1,6 @@
+<p *ngIf="isFetching">Fetching data...</p>
+<ul *ngIf="!isFetching">
+  <!--Use directive *ngFor to do something you want in Angular, very important concept-->
+  <li *ngFor="let person of personList" (click)="onRemovePerson(person)">{{person}}</li>
+  <!--Remember {{...}} means string interpolation which means you can add something to the HTML code anywhere as you like-->
+</ul>
